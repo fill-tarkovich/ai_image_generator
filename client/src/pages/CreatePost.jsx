@@ -12,7 +12,7 @@ const CreatePost = () => {
     prompt: "",
     photo: "",
   });
-  const [generatingImg, setGeneratingImg] = useState(false);
+  const [generatingImg, setGeneratingImg] = useState(true);
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = () => {};
@@ -63,8 +63,8 @@ const CreatePost = () => {
               />
             )}
             {generatingImg && (
-              <div>
-                <Loader className="absolute justify-center items-center bg-[rgba(0,0,0,0.5)] rounded-lg" />
+              <div className="absolute inset-0 z-0 flex justify-center items-center bg-[rgba(0,0,0,0.5)] rounded-lg">
+                <Loader />
               </div>
             )}
           </div>
