@@ -7,7 +7,7 @@ const RenderCards = ({ data, title }) => {
   }
 
   return (
-    <h2 className="mt-5 font-bold text-[#6449ff] text-x1 uppercase">{title}</h2>
+    <h2 className="mt-5 font-bold text-[#6449ff] text-xl uppercase">{title}</h2>
   );
 };
 
@@ -16,7 +16,7 @@ const Home = () => {
   const [allPosts, setAllPosts] = useState(null);
   const [searchText, setsearchText] = useState("");
   return (
-    <section>
+    <section className="max-w-7xl mx-auto">
       <div>
         <h1 className="font-extrabold text-[#222328] text-[32px]">
           The Community Showcase
