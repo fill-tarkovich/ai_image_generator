@@ -8,9 +8,9 @@ import { FormField, Loader } from "../components";
 const CreatePost = () => {
   const navigate = useNavigate();
   const [form, setForm] = useState({
-    name: "",
-    prompt: "",
-    photo: "",
+    name: '',
+    prompt: '',
+    photo: '',
   });
   const [generatingImg, setGeneratingImg] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -41,7 +41,7 @@ const CreatePost = () => {
   };
   const handleSubmit = () => { };
   const handleChange = (event) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    setForm({ ...form, [event.target.name]: event.target.value });
   };
   const handleSurpriseMe = () => {
     const randomPrompt = getRandomPrompt(form.prompt);
