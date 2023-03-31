@@ -70,7 +70,14 @@ const Home = () => {
         </p>
       </div>
       <div className="mt-16">
-        <FormField labelName="search posts" type="text" name="text" />
+        <FormField
+          labelName="search posts"
+          type="text"
+          name="text"
+          placeholder="search posts"
+          value={searchText}
+          handleChange={handleSearchChange}
+        />
       </div>
       <div className="mt-10">
         {loading ? (
@@ -89,7 +96,10 @@ const Home = () => {
             )}
             <div className="grid lg:grid-cols-4 sm:grid-cols-3 xs:grid-cols-2 grid-cols-1 gap-3">
               {searchText ? (
-                <RenderCards data={[]} title="No search result found" />
+                <RenderCards
+                  data={searchedResults}
+                  title="No search result found"
+                />
               ) : (
                 <RenderCards data={allPosts} title="No posts found" />
               )}
